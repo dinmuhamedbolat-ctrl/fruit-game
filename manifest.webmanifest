@@ -1,0 +1,11 @@
+{
+  "name": "Fruit Basket Rush",
+  "short_name": "Fruit Rush",
+  "description": "Catch falling fruits in matching baskets — HTML5 cross-platform game.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#1a2f1f",
+  "theme_color": "#3d7a45"
+}
