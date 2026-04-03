@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="theme-color" content="#3d7a45" />
+  <title>Fruit Basket Rush — HTML5</title>
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="stylesheet" href="css/game.css" />
+</head>
+<body>
+  <div id="app">
+    <canvas id="game" aria-label="Fruit catching game"></canvas>
+
+    <div id="hud" class="hud hidden">
+      <div class="hud-top">
+        <div class="score-block">
+          <span class="label">Score</span>
+          <span id="scoreVal">0</span>
+          <span id="comboBadge" class="combo-badge hidden">×2 COMBO!</span>
+        </div>
+        <div class="hearts" id="hearts" aria-label="Lives"></div>
+      </div>
+      <div class="hud-hint" id="hudHint">Drag each basket • Keys 1–4 select • ← → moves</div>
+    </div>
+
+    <div id="menu" class="screen menu">
+      <div class="menu-card">
+        <p class="subtitle">HTML5 • Cross-platform • Canvas 2D</p>
+        <h1>Fruit Basket Rush</h1>
+        <p class="blurb">
+          Slide the basket row to catch fruits in the matching basket.
+          Bonuses fall from the bushes — grab them when you can!
+        </p>
+        <div class="controls-help">
+          <p><strong>Desktop:</strong> drag a basket · 1–4 select · ← → move selected</p>
+          <p><strong>Mobile:</strong> drag each basket separately</p>
+        </div>
+        <button type="button" class="btn primary" id="btnPlay">Play</button>
+        <button type="button" class="btn ghost" id="btnSound" data-on="1">Sound: On</button>
+      </div>
+    </div>
+
+    <div id="gameover" class="screen hidden">
+      <div class="menu-card">
+        <h2>Game Over</h2>
+        <p class="final-score">Score: <span id="finalScore">0</span></p>
+        <p class="ad-note" id="adNote">Loading ad…</p>
+        <button type="button" class="btn primary" id="btnRetry">Play Again</button>
+        <button type="button" class="btn ghost" id="btnMenu">Menu</button>
+      </div>
+    </div>
+
+    <div id="pauseOverlay" class="screen hidden subtle">
+      <p>Paused</p>
+      <button type="button" class="btn ghost" id="btnResume">Resume</button>
+    </div>
+  </div>
+
+  <script src="js/ads.js"></script>
+  <script src="js/audio.js"></script>
+  <script src="js/game.js"></script>
+</body>
+</html>
